@@ -1,0 +1,1 @@
+calc_score(user_cards) > 21
