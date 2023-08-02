@@ -1,0 +1,51 @@
+day 21 - class inheritance, list slicing
+snake part 2 - creating food, detecting collision with food/wall/tail, creating scoreboard
+
+class inheritance
+- class can inherit attributes from parent classes
+- e.g.
+
+class Animal:
+    # parent class
+    # sample attributes of Animal class
+    def __init__(self):
+        self.multicell = True
+    
+    def breathe(self):
+        print('animals can breathe')
+    
+    def eat(self):
+        print('animals can eat')
+
+class Fish(Animal):
+    # child class that inherits from Animal class
+    def __init__(self):
+        super().__init__() # recommended for inheritance, but not required
+        self.legs = 0
+        
+        def swim(self):
+            print('fish can swim')
+        
+        def breathe(self):
+            super().breathe() # calls on everything the method does
+            print('fish can breathe under water')
+            # when this method is called, the breathe() from Animal() also gets called()
+
+nemo.Fish()
+nemo.swim() # 'fish can swim'
+nemo.breathe() # because Fish() inherits from Animal(), Fish() can also use attributes and methods of Animal()
+nemo.eat()
+print(nemo.multicell)
+
+==========================================================
+slicing lists/tuples
+letters = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j']
+# try this in python emulator to learn more
+letters[2:6]
+letters[2:]
+letters[:5]
+letters[2:5:2] # third number specifies increment
+letters[::2]
+# same can be done with tuples
+
+
