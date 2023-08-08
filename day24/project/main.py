@@ -22,13 +22,12 @@ with open('Input/Letters/starting_letter.txt', 'r') as letter:
     # store letter contents in a variable
     invitation = letter.read()
     
-    # print(invitation) # remove after testing
+# print(invitation) # remove after testing
 
-    # Step 3: loop through name list
-    for name in invited:
-        # replace [name] with the appropriate name in the list
-        formatted_invitation = invitation.replace('[name]', name)
-        # Step 4: create outgoing letter each personalized with the names of invited
-        with open(f'Output/ReadyToSend/letter_for_{name}.txt', 'w') as outgoing_letter:
-            outgoing_letter.write(formatted_invitation)
+# Step 3: loop through name list
+for name in invited:
+    # replace [name] with the appropriate name in the list
+    # Step 4: create outgoing letter each personalized with the names of invited
+    with open(f'Output/ReadyToSend/letter_for_{name}.txt', 'w') as outgoing_letter:
+        outgoing_letter.write(invitation.replace('[name]', name))
 
